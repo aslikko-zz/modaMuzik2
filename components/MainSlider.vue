@@ -1,12 +1,13 @@
 <template>
   <v-container style="width: 940px; height: 400px">
-    <v-carousel hide-delimiters
+    <v-carousel cycle
+                hide-delimiters
                 :show-arrows="false"
                 height="400">
       <v-carousel-item class="image"
-                       v-for="(item,i) in items"
+                       v-for="(slide,i) in slides"
                        :key="i"
-                       :src="item.src">
+                       :src="slide.src">
 
       </v-carousel-item>
     </v-carousel>
@@ -18,12 +19,12 @@
   export default {
     data () {
       return {
-        items: [
+        slides: [
           {
-            src: require('~/assets/slide1.jpg')
+            src: 'https://www.modamuzik.com/custom/banners/bnt76405743256.jpg',
           },
-          {
-            src: require('~/assets/Slide2.jpg')
+           {
+            src: 'https://www.modamuzik.com/custom/banners/bnt84855743268.jpg',
           },
 
         ],

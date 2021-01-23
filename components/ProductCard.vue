@@ -3,14 +3,15 @@
         <v-row>
             <v-col>
                 <v-carousel
+                        :show-arrows="false"
                         style="width: 350px"
                         height="400">
                     <v-carousel-item
+                            
                             v-for="(item,i) in items"
                             :key="i"
                             :src="item.src"
-                            reverse-transition="fade-transition"
-                            transition="fade-transition"
+                            
 
                     ></v-carousel-item>
                 </v-carousel>
@@ -38,7 +39,6 @@
                 <v-row style="margin-top: 35px"><v-col cols="2"><p><v-btn
                         small style="font-size: 20px;height: 40px" @click="decrement">-
                 </v-btn></p></v-col>
-                    <v-col cols="1"><p style="font-size: 20px">{{ this.$store.state.count }}</p></v-col>
                     <v-col cols="2"><p><v-btn small style="font-size: 20px;height: 40px" @click="increment">+</v-btn></p></v-col>
                     <v-col><v-btn
                     color="black"
@@ -69,10 +69,10 @@
                 value: 1,
                 items: [
                     {
-                        src: require('~/assets/piano1.jpg')
+                        src: 'https://st1.myideasoft.com/idea/dl/53/myassets/products/237/lp380-rw-483-1.jpg?revision=1554923143'
                     },
                     {
-                        src: require('~/assets/piano2.jpg')
+                        src: 'https://st2.myideasoft.com/idea/dl/53/myassets/products/237/lp380-rw-483-2.jpg?revision=1554923144'
                     },
                 ],
 
